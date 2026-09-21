@@ -118,7 +118,6 @@ public class MathOperations {
         return seconds / 60.0;
     }
 
-
 //6. Метод для вычисления средней скорости
 //Условие:
 //Создайте метод averageSpeed(double distance, double time), который возвращает среднюю скорость (distance / time).
@@ -126,7 +125,6 @@ public class MathOperations {
     public static double averageSpeed(double distance, double time){
         return distance / time;
     }
-
 
 //7. Метод для нахождения гипотенузы
 //Условие:
@@ -137,7 +135,6 @@ public class MathOperations {
         return Math.sqrt((a * a) + (b * b));
     }
 
-
 //        8. Метод для длины окружности
 //Условие:
 //Создайте метод circleCircumference(double radius), который возвращает длину окружности по формуле 2πr.
@@ -146,7 +143,6 @@ public class MathOperations {
         return 2 * Math.PI * radius;
     }
 
-
 //9. Метод для вычисления процентов
 //Условие:
 //Создайте метод calculatePercentage(double total, double part) — возвращает, какой процент от общего составляет часть.
@@ -154,7 +150,6 @@ public class MathOperations {
     public static double calculatePercentage(double total, double part){
         return (part / total) * 100.0;
     }
-
 
 //        10. Методы перевода температуры
 //Условие:
@@ -170,15 +165,6 @@ public class MathOperations {
         return (f - 32.0) * 5.0 / 9.0;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
