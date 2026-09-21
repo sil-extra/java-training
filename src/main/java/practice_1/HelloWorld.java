@@ -1,4 +1,4 @@
-import java.util.concurrent.SynchronousQueue;
+package practice_1;
 
 public class HelloWorld {
     //fields
