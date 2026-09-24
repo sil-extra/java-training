@@ -11,7 +11,7 @@ package hw8_classMathConstants;
 
 public class MathConstants {
     static final double PI = 3.14159;
-    final double E = 2.71828;
+    static final double E = 2.71828;
 
     static double calculateCircleArea(double r) {
         return PI * r * r;
@@ -21,7 +21,7 @@ public class MathConstants {
         return 2 * PI * r;
     }
 
-    double calculateExponentialGrowth(double initialValue, double rate, double time) {
+    static double calculateExponentialGrowth(double initialValue, double rate, double time) {
         return initialValue * Math.pow(E, rate * time);
     }
 }

@@ -22,10 +22,9 @@ public class Main {
 
         Company.companyName = "Updated company";
 
-        employee1.printCompanyName();
-        employee2.printCompanyName();
-        employee3.printCompanyName();
+        Company.printCompanyName();
 
+        //verifying that a final field cannot be reassigned
         //employee1.employeeID = 200;
 
         Library library = new Library();
