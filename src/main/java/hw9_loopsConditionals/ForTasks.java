@@ -2,19 +2,21 @@ package hw9_loopsConditionals;
 
 import java.util.Scanner;
 
-public class forTasks {
+public class ForTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //method that prints out all numbers between 1 and 100 that can be divided by 3
         printNumbersDivisibleByThree();
 
         //method that calculate the sum of all numbers from 1 till n
-        System.out.println(sumOfAllNumbers());
+        System.out.println(sumOfAllNumbers(scanner));
 
         //method that print multiplication table for the entered number
-        printMultiplicationTable();
+        printMultiplicationTable(scanner);
 
         //method that check if number is prime
-        System.out.println(checkNumberIsPrime());
+        System.out.println(checkNumberIsPrime(scanner));
 
         //method that print to the console numbers from 1 to 10
         printNumbersFromOneToTen();
@@ -45,9 +47,7 @@ public class forTasks {
 //      for
 //    переменная int sum = 0
 //      System.out.println()
-    public static String sumOfAllNumbers() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String sumOfAllNumbers(Scanner scanner) {
         System.out.println("Enter a number: ");
         String input = scanner.nextLine();
 
@@ -77,9 +77,7 @@ public class forTasks {
 //    for
 //    System.out.println()
 //    арифметические операторы
-    public static void printMultiplicationTable() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void printMultiplicationTable(Scanner scanner) {
         System.out.println("Enter a number: ");
         String input = scanner.nextLine();
 
@@ -93,7 +91,7 @@ public class forTasks {
 
         System.out.println("The multiplication table for " + number);
         int product;
-        for (int i = 1; i < 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             product = number * i;
             System.out.println(number + " X " + i + " = " + product);
         }
@@ -109,9 +107,7 @@ public class forTasks {
 //        if-else
 //    логическая переменная (boolean isPrime = true)
 //      System.out.println()
-    public static String checkNumberIsPrime() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkNumberIsPrime(Scanner scanner) {
         System.out.println("Enter a number to check whether it is prime: ");
         String input = scanner.nextLine();
 
@@ -123,10 +119,15 @@ public class forTasks {
         }
 
         boolean isPrime = true;
-        for (int i = 2; i <= number - 1; i++) {
-            if (number % i == 0) {
-                isPrime = false;
-                break;
+
+        if (number <= 1) {
+            isPrime = false;
+        } else {
+            for (int i = 2; i <= number - 1; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
             }
         }
         return "The number " + number + " is prime: " + isPrime;

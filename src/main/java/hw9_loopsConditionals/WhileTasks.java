@@ -2,16 +2,18 @@ package hw9_loopsConditionals;
 
 import java.util.Scanner;
 
-public class whileTasks {
+public class WhileTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //method that calculate factorial
-        System.out.println(calculateFactorial());
+        System.out.println(calculateFactorial(scanner));
 
         //method to print even numbers
-        printEvenNumbers();
+        printEvenNumbers(scanner);
 
         //method to print positive numbers
-        printCountdown();
+        printCountdown(scanner);
     }
 
 //    1. Вычисление факториала с помощью while
@@ -23,9 +25,7 @@ public class whileTasks {
 //      while
 //    переменные int result = 1, int i = 1
 //      System.out.println()
-    public static String calculateFactorial() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String calculateFactorial(Scanner scanner) {
         System.out.println("Enter a positive number: ");
         String input = scanner.nextLine();
 
@@ -58,9 +58,7 @@ public class whileTasks {
 //      if, оператор %
 //      System.out.println()
 //
-    public static void printEvenNumbers() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void printEvenNumbers(Scanner scanner) {
         System.out.println("Enter a positive number: ");
         String input = scanner.nextLine();
 
@@ -95,9 +93,7 @@ public class whileTasks {
 //      while
 //      System.out.println()
 //    декремент number--
-    public static void printCountdown() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void printCountdown(Scanner scanner) {
         System.out.println("Enter a positive number: ");
         String input = scanner.nextLine();
 

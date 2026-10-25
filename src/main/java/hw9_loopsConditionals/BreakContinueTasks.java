@@ -2,19 +2,20 @@ package hw9_loopsConditionals;
 
 import java.util.Scanner;
 
-public class breakContinueTasks {
+public class BreakContinueTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         //method to calculate sum of positive numbers
-        System.out.println(sumOfNumbers());
+        System.out.println(sumOfNumbers(scanner));
 
         //method that print to the console numbers from 1 to 20 that are not divided by 3
         printNumbersNotDivisibleByThree();
 
         //method that prints to the console positive numbers
-        printPositiveNumbers();
+        printPositiveNumbers(scanner);
 
         //method that waits for stop command to finish execution
-        waitForStop();
+        waitForStop(scanner);
     }
 
 //    1. Сумма чисел до первого отрицательного (использовать break)
@@ -27,8 +28,7 @@ public class breakContinueTasks {
 //      break
 //      переменная sum
 //      System.out.println()
-    public static String sumOfNumbers() {
-        Scanner scanner = new Scanner(System.in);
+    public static String sumOfNumbers(Scanner scanner) {
         int sum = 0;
 
         while (true) {
@@ -77,8 +77,7 @@ public class breakContinueTasks {
 //      while или do-while
 //      if, continue
 //      System.out.println()
-    public static void printPositiveNumbers() {
-        Scanner scanner = new Scanner(System.in);
+    public static void printPositiveNumbers(Scanner scanner) {
         System.out.println("Enter a positive number: ");
 
         while (true) {
@@ -109,9 +108,7 @@ public class breakContinueTasks {
 //        метод .equals("stop")
 //        break
 //        System.out.println()
-    public static void waitForStop() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static void waitForStop(Scanner scanner) {
         while (true) {
             System.out.println("Enter a command: ");
             String input = scanner.nextLine();

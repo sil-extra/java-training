@@ -2,22 +2,24 @@ package hw9_loopsConditionals;
 
 import java.util.Scanner;
 
-public class doWhileTasks {
+public class DoWhileTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //method to find a positive number
-        System.out.println(findPositiveNumber());
+        System.out.println(findPositiveNumber(scanner));
 
         //method to check password
-        System.out.println(checkPassword());
+        System.out.println(checkPassword(scanner));
 
         //method to print to the console numbers from 1 to 10
         printNumbersFromOneToTen();
 
         //method that wait for exit command to finish execution
-        System.out.println(waitForExitCommand());
+        System.out.println(waitForExitCommand(scanner));
 
         //method that counts number of digits
-        System.out.println(countDigitsInNumber());
+        System.out.println(countDigitsInNumber(scanner));
     }
 //         1. Запрос положительного числа
 //    Задача:
@@ -28,9 +30,7 @@ public class doWhileTasks {
 //      do-while
 //      System.out.println()
 //      условие number <= 0
-    public static String findPositiveNumber() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String findPositiveNumber(Scanner scanner) {
         int number;
         do {
             System.out.println("Enter a positive number: ");
@@ -49,8 +49,7 @@ public class doWhileTasks {
 //      do-while
 //       метод .equals() для строк
 //      System.out.println()
-    public static String checkPassword() {
-        Scanner scanner = new Scanner(System.in);
+    public static String checkPassword(Scanner scanner) {
         String correctPassword = "123abc!";
 
         String providedPassword;
@@ -69,8 +68,6 @@ public class doWhileTasks {
 //      do-while
 //       System.out.println()
     public static void printNumbersFromOneToTen() {
-        Scanner scanner = new Scanner(System.in);
-
         int i = 1;
         do {
             System.out.println(i);
@@ -86,9 +83,7 @@ public class doWhileTasks {
 //      do-while
 //      метод .equals()
 //      System.out.println()
-    public static String waitForExitCommand() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String waitForExitCommand(Scanner scanner) {
         String command;
         do {
             System.out.println("Enter a command to finish the program execution: ");
@@ -106,8 +101,7 @@ public class doWhileTasks {
 //    деление / 10
 //    count++
 //    условие для 0
-    public static String countDigitsInNumber() {
-        Scanner scanner = new Scanner(System.in);
+    public static String countDigitsInNumber(Scanner scanner) {
         System.out.println("Enter a number to count digits: ");
         String input = scanner.nextLine();
         int number = Integer.parseInt(input);

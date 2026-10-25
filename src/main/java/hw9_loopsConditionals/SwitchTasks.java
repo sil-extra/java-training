@@ -1,30 +1,31 @@
 package hw9_loopsConditionals;
 
-import java.io.LineNumberReader;
 import java.util.Scanner;
 
-public class switchTasks {
+public class SwitchTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //method to return the name of day of week based on its number
-        System.out.println(checkDayOfWeekName());
+        System.out.println(checkDayOfWeekName(scanner));
 
         //method that returns the ticket price based on a day of week: SOLUTION1 switch-case
-        System.out.println(checkTicketPrice());
+        System.out.println(checkTicketPrice(scanner));
 
         //method that returns the ticket price based on a day of week: SOLUTION2 if-else
-        System.out.println(checkTicketPrice2());
+        System.out.println(checkTicketPrice2(scanner));
 
         //method that converts mark to grade: SOLUTION1 if-else
-        System.out.println(convertMarkToGrade());
+        System.out.println(convertMarkToGrade(scanner));
 
         //method that converts mark to grade: SOLUTION2 switch-case
-        System.out.println(convertMarkToGrade2());
+        System.out.println(convertMarkToGrade2(scanner));
 
         //method that returns the command based on the keyword
-        System.out.println(checkCommand());
+        System.out.println(checkCommand(scanner));
 
         //method that returns the result of two numbers calculation
-        System.out.println(calculateTwoNumbersMathOperation());
+        System.out.println(calculateTwoNumbersMathOperation(scanner));
     }
 
 //    1. Вывод дня недели по номеру
@@ -36,9 +37,7 @@ public class switchTasks {
 //     switch-case
 //     System.out.println()
 //     default (для обработки некорректного ввода)
-    public static String checkDayOfWeekName() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkDayOfWeekName(Scanner scanner) {
         System.out.println("Enter a day of week number from 1 to 7: ");
         String input = scanner.nextLine();
 
@@ -74,9 +73,7 @@ public class switchTasks {
 //      System.out.println()
 
     //SOLUTION1: switch-case
-    public static String checkTicketPrice() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkTicketPrice(Scanner scanner) {
         System.out.println("Enter the day of week number to check the price: ");
         String input = scanner.nextLine();
 
@@ -97,9 +94,7 @@ public class switchTasks {
     }
 
     //SOLUTION2: if-else
-    public static String checkTicketPrice2() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkTicketPrice2(Scanner scanner) {
         System.out.println("Enter the day of week number to check the price: ");
         String input = scanner.nextLine();
 
@@ -135,9 +130,7 @@ public class switchTasks {
 //      System.out.println()
 
     //SOLUTION1: if-else
-    public static String convertMarkToGrade() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String convertMarkToGrade(Scanner scanner) {
         System.out.println("Enter a mark within the range of 0 to 100: ");
         String input = scanner.nextLine();
 
@@ -166,9 +159,7 @@ public class switchTasks {
     }
 
     //SOLUTION2: switch-case
-    public static String convertMarkToGrade2() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String convertMarkToGrade2(Scanner scanner) {
         System.out.println("Enter a mark within the range of 0 to 100: ");
         String input = scanner.nextLine();
 
@@ -204,9 +195,7 @@ public class switchTasks {
 //      switch-case по String
 //      System.out.println()
 //      default
-    public static String checkCommand() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkCommand(Scanner scanner) {
         System.out.println("Enter a keyword to check a command: ");
         String keyword = scanner.nextLine();
 
@@ -232,9 +221,7 @@ public class switchTasks {
 //      if для проверки деления на 0
 //      System.out.println()
 //      Арифметические операторы +, -, *, /
-    public static String calculateTwoNumbersMathOperation() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String calculateTwoNumbersMathOperation(Scanner scanner) {
         System.out.println("Enter the first number: ");
         String input1 = scanner.nextLine();
         input1 = input1.replace(",", ".");

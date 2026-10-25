@@ -4,29 +4,31 @@ import java.util.Scanner;
 
 public class IfElseTasks {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         //method to determine a number sign
-        System.out.println(checkNumberSign());
+        System.out.println(checkNumberSign(scanner));
 
         //method to find the maximum number out of 2: SOLUTION 1: Math.max()
-        System.out.println(findMaxNumber());
+        System.out.println(findMaxNumber(scanner));
 
         //method to find the maximum number out of 2: SOLUTION 2: if-else
-        System.out.println(findMaxNumber2());
+        System.out.println(findMaxNumber2(scanner));
 
         //method to get the description of mark between 1 and 5: SOLUTION 1: switch-case
-        System.out.println(getGradeDescription());
+        System.out.println(getGradeDescription(scanner));
 
         //method to get the description of mark between 1 and 5: SOLUTION 2: if-else
-        System.out.println(getGradeDescription2());
+        System.out.println(getGradeDescription2(scanner));
 
         //method to check parity of a number
-        System.out.println(checkParity());
+        System.out.println(checkParity(scanner));
 
         //method to get discount based on age
-        System.out.println(checkDiscount());
+        System.out.println(checkDiscount(scanner));
 
         //method to assess the test score
-        System.out.println(assessTestScore());
+        System.out.println(assessTestScore(scanner));
     }
 
 //    1. Определение знака числа
@@ -39,8 +41,7 @@ public class IfElseTasks {
 //      Scanner
 //      if, else if, else
 //      System.out.println()
-    public static String checkNumberSign() {
-        Scanner scanner = new Scanner(System.in);
+    public static String checkNumberSign(Scanner scanner) {
         System.out.println("Enter a number to check its sign: ");
         String input = scanner.nextLine();
 
@@ -71,9 +72,7 @@ public class IfElseTasks {
 //      System.out.println()
 
     //SOLUTION 1: Math.max()
-    public static String findMaxNumber() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String findMaxNumber(Scanner scanner) {
         System.out.println("Enter the first number: ");
         String input1 = scanner.nextLine();
         System.out.println("Enter the second number: ");
@@ -96,9 +95,7 @@ public class IfElseTasks {
     }
 
     //SOLUTION 2: if-else
-    public static String findMaxNumber2() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String findMaxNumber2(Scanner scanner) {
         System.out.println("Enter the first number: ");
         String input1 = scanner.nextLine();
         System.out.println("Enter the second number: ");
@@ -137,9 +134,7 @@ public class IfElseTasks {
 //      System.out.println()
 
     //SOLUTION 1: switch-case
-    public static String getGradeDescription() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String getGradeDescription(Scanner scanner) {
         System.out.println("Enter a grade between 1 and 5: ");
         String input = scanner.nextLine();
 
@@ -162,9 +157,7 @@ public class IfElseTasks {
     }
 
     //SOLUTION 2: if-else
-    public static String getGradeDescription2() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String getGradeDescription2(Scanner scanner) {
         System.out.println("Enter a grade between 1 and 5: ");
         String input = scanner.nextLine();
 
@@ -197,9 +190,7 @@ public class IfElseTasks {
 //      Scanner
 //      if-else, оператор %
 //      System.out.println()
-    public static String checkParity() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkParity(Scanner scanner) {
         System.out.println("Enter a number to check parity: ");
         String input = scanner.nextLine();
 
@@ -227,9 +218,7 @@ public class IfElseTasks {
 //      Scanner
 //      if, else if, else
 //      System.out.println()
-    public static String checkDiscount() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String checkDiscount(Scanner scanner) {
         System.out.println("Enter your age: ");
         String input = scanner.nextLine();
 
@@ -264,9 +253,7 @@ public class IfElseTasks {
 //      Scanner
 //      if, else if, else
 //      System.out.println()
-    public static String assessTestScore() {
-        Scanner scanner = new Scanner(System.in);
-
+    public static String assessTestScore(Scanner scanner) {
         System.out.println("Enter the score from 0 to 100: ");
         String input = scanner.nextLine();
 
@@ -279,7 +266,7 @@ public class IfElseTasks {
 
         String result = "";
         if (score < 0 || score > 100) {
-            result = "Error: entered value is not within the range of 1 to 100.";
+            result = "Error: entered value is not within the range of 0 to 100.";
         } else if (score >= 90) {
             result = "Excellent";
         } else if (score >= 75) {
